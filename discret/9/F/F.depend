@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1394745140 source:/home/delf/c++/discret/9/F/main.cpp
+	<cstdio>
+	<cstdlib>
+	<cassert>
+	<cstring>
+	<string>
+	<iostream>
+

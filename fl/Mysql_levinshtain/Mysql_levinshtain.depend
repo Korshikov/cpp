@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1395510829 source:/home/delf/c++/fl/Mysql_levinshtain/main.cpp
+	<stdlib.h>
+	<iostream>
+	<sstream>
+	<stdexcept>
+	"mysql_connection.h"
+	<cppconn/driver.h>
+	<cppconn/exception.h>
+	<cppconn/resultset.h>
+	<cppconn/statement.h>
+	<cppconn/prepared_statement.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1385171401 source:/home/delf/c++/discret/5/I+J/main.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<queue>
+
