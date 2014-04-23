@@ -1,12 +1,30 @@
-put zero a
-put one b
-put two c
-put three d
-put four e
-get two
-next two
-delete one
-delete three
-get two
-next two
-next four
+put 0 0
+put 1 1
+put 2 2
+next 0
+next 1
+next 2
+prev 0
+prev 1
+prev 2
+delete 1
+next 0
+next 1
+next 2
+prev 0
+prev 1
+prev 2
+delete 2
+next 0
+next 1
+next 2
+prev 0
+prev 1
+prev 2
+delete 1
+next 0
+next 1
+next 2
+prev 0
+prev 1
+prev 2
