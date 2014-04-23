@@ -1,0 +1,12 @@
+put zero a
+put one b
+put two c
+put three d
+put four e
+get two
+next two
+delete one
+delete three
+get two
+next two
+next four
