@@ -25,7 +25,7 @@ struct lis{
         next=NULL;
         ins_prev=prev_ins;
         if(prev_ins!=NULL){
-            prev_ins->next=this;
+            prev_ins->ins_next=this;
         }
         prev_ins=this;
         ins_next=NULL;
@@ -41,7 +41,7 @@ struct lis{
         next=NULL;
         ins_prev=prev_ins;
         if(prev_ins!=NULL){
-            prev_ins->next=this;
+            prev_ins->ins_next=this;
         }
         prev_ins=this;
         ins_next=NULL;
@@ -58,7 +58,6 @@ struct lis{
         }
         if(prev_ins==this){
             prev_ins=this->ins_prev;
-            prev_ins->ins_next=this->ins_next;
         }
         if(ins_next!=NULL){
             this->ins_next->ins_prev=this->ins_prev;
@@ -93,7 +92,7 @@ lis* finde(string key){
 int main()
 {
     freopen("linkedmap.in","r",stdin);
-    //freopen("linkedmap.out","w+",stdout);
+    freopen("linkedmap.out","w+",stdout);
 
     char c,c_key[25],c_value[25];
     string key,value;
@@ -107,7 +106,8 @@ int main()
     while((scanf("%c",&c)!=EOF)&&(c!=EOF)){
         switch(c){
         case 'p':
-            scanf("ut %s %s\n",c_key,c_value);
+            if((scanf("%c",&c)!=EOF)&&(c!=EOF)&&(c=='u')){
+            scanf("t %s %s\n",c_key,c_value);
             key= string(c_key);
             value= string(c_value);
             buf = finde(key);
@@ -120,6 +120,17 @@ int main()
                 }
             }else if((buf!=NULL)&&(buf->key==key)){
                 buf->value=value;
+            }}
+            else{
+                scanf("ev %s\n",c_key);
+                key= string(c_key);
+                buf = finde(key);
+                if((buf==NULL)||(buf->ins_prev==NULL)){
+                    printf("none\n");
+                }else{
+                    printf("%s\n",buf->ins_prev->value.c_str());
+                }
+
             }
 
             break;
