@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1398979918 source:/Users/tatana/Documents/Delf/cpp_2014/discret/14/A/main.cpp
+	<cstdio>
+	<cstdlib>
+	<cmath>
+	<climits>
+	<algorithm>
+
