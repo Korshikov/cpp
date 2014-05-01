@@ -70,14 +70,14 @@ int main()
     scanf("%lld",&n);
     a = new SegmentTreeNodeValueType[n];
     for(int i=0; i< n;i++){
-        scanf("%d",&a[i]);
+        scanf("%lld",&a[i]);
     }
 
 
 
     SegmentTree tree(a,n);
 
-    long long r = tree.request(1,4);
+    //long long r = tree.request(5,5);
     printf("%lld",r);
 
     fclose(stdin);
