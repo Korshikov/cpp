@@ -11,7 +11,6 @@ struct SegmentTreeNodeValueType {
 
 
     SegmentTreeNodeValueType() {
-
     }
     //with out constructor;
     SegmentTreeNodeValueType(int){
@@ -62,25 +61,26 @@ SegmentTreeNodeValueType const neutralElement(0);
 struct SegmentTreeNode {
     //long long left,right;
     SegmentTreeNodeValueType value;
-
-    SegmentTreeNode(){
-
-    }
 };
 
 struct SegmentTree {
     SegmentTree(SegmentTreeNodeValueType *a, const long long &n) {
-        treeN = 1 << (long long) ceil(log2(n));
-        treeLength = treeN << 1;
+        treeN = n;
+        treeLength = 4*n;
         tree = new SegmentTreeNode[treeLength];
-        for (int i = treeN - 1; i < n + treeN - 1; i++) {
-            tree[i].value = a[i - treeN + 1];
-        }
-        for(int i= n + treeN - 1; i< treeLength;i++){
-            tree[i].value = neutralElement;
-        }
-        for (int i = treeN - 2; i >= 0; i--) {
-            tree[i].value = functionInNode(tree[i * 2 + 1].value, tree[i * 2 + 2].value);
+        build(a, 0, 0, treeN-1);
+    }
+
+    void build(SegmentTreeNodeValueType *a, long long nodeNumber, long long tLeft, long long tRight){
+        if(tLeft== tRight){
+            tree[nodeNumber].value = a[tLeft];
+            return;
+        }else{
+            long long tMidle = tLeft + ((tRight - tLeft) / 2);
+            build(a, nodeNumber*2+1, tLeft, tMidle);
+            build(a, nodeNumber*2+2, tMidle+1, tRight);
+            tree[nodeNumber].value = functionInNode(tree[nodeNumber*2+1].value, tree[nodeNumber*2+2].value);
+            return;
         }
     }
 

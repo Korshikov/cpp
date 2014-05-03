@@ -26,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		8DD76F6C0486A84900D96B5E /* C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E8B029090EE04C91782 /* C.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = C.1; sourceTree = "<group>"; };
 		CB7F47782047A70AB0E0268E /* crypto.in */ = {isa = PBXFileReference; lastKnownFileType = file.in; path = crypto.in; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +63,6 @@
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DD76F6C0486A84900D96B5E /* C */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,7 +93,6 @@
 			name = C;
 			productInstallPath = "$(HOME)/bin";
 			productName = C;
-			productReference = 8DD76F6C0486A84900D96B5E /* C */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -148,6 +145,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = C;
 			};
 			name = Release;

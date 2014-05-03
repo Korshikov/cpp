@@ -1,0 +1,140 @@
+TC
+v7
+r0
+t420765494.948082
+cCheck dependencies
+cCompileC build/C.build/Release/C.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C normal x86_64
+cGenerateDSYMFile /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C.dSYM /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C
+t1399070212
+s14708
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C.LinkFileList
+c0000000053641BF7000000000000006C
+t1399069687
+s108
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/main.o
+t1399070212
+s27676
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C
+t1399070212
+s14848
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C.LinkFileList
+c0000000053641BF7000000000000006E
+t1399069687
+s110
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/main.o
+t1399072596
+s28240
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C
+t1399072596
+s14904
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C.dSYM
+t1399072596
+s102
+
+N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp
+c0000000053642753000000000000140F
+t1399072595
+s5135
+i<cstdio>
+i<cmath>
+i<algorithm>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies420765494#420765494#0(0"0(0#1#0"0#0"0#
+
+CCompileC build/C.build/Release/C.build/Objects-normal/i386/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s420763010.685859
+e420763012.409083
+r1
+xCompileC
+xbuild/C.build/Release/C.build/Objects-normal/i386/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In function 'int main()':
+o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 2 has type 'long int'
+o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 3 has type 'long int'
+o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 4 has type 'long int'
+o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 5 has type 'long int'
+lSLF07#2@67"Compile /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420763010#420763012#0(699"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In function 'int main()':/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 2 has type 'long int'/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 3 has type 'long int'/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 4 has type 'long int'/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:174: warning: format '%lld' expects type 'long long int', but argument 5 has type 'long int'4(22@78"Format '%lld' expects type 'long long int', but argument 2 has type 'long int'420763012#87#153#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420763007#174#0#174#0#56"format '*' expects type '*', but argument * has type '*'0(22@78"Format '%lld' expects type 'long long int', but argument 3 has type 'long int'420763012#240#153#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420763007#174#0#174#0#56"format '*' expects type '*', but argument * has type '*'0(22@78"Format '%lld' expects type 'long long int', but argument 4 has type 'long int'420763012#393#153#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420763007#174#0#174#0#56"format '*' expects type '*', but argument * has type '*'0(22@78"Format '%lld' expects type 'long long int', but argument 5 has type 'long int'420763012#546#153#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420763007#174#0#174#0#56"format '*' expects type '*', but argument * has type '*'0(0#0#59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp3345727440346443776#1345"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/include -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/DerivedSources/i386 -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/main.o0#
+
+CCompileC build/C.build/Release/C.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s420765396.140763
+e420765396.381297
+r1
+xCompileC
+xbuild/C.build/Release/C.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420765396#420765396#0(0"0(0#0#59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp7593470432795062272#1351"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/C-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/include -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/main.o0#
+
+CCreateUniversalBinary /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C normal "x86_64 i386"
+s420763012.843801
+e420763012.859659
+r1
+xCreateUniversalBinary
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C
+xnormal
+xx86_64 i386
+lSLF07#2@58"CreateUniversalBinary build/Release/C normal "x86_64 i386"420763012#420763012#0(0"0(0#0#62"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/x86_64 i3864640085728#367"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    /usr/bin/lipo -create /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C -output /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C0#
+
+CGenerateDSYMFile /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C.dSYM /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C
+s420765396.451178
+e420765396.460126
+r1
+xGenerateDSYMFile
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C.dSYM
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C
+lSLF07#2@53"GenerateDSYMFile build/Release/C.dSYM build/Release/C420765396#420765396#0(0"0(0#0#66"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C4640590832#232"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    /Developer/usr/bin/dsymutil /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C.dSYM0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C normal i386
+s420763012.409221
+e420763012.843689
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C
+xnormal
+xi386
+lSLF07#2@107"Link /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C420763012#420763012#0(0"0(0#0#0"4640145440#574"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -filelist /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/i386/C0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C normal x86_64
+s420763012.391962
+e420763012.834447
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C
+xnormal
+xx86_64
+lSLF07#2@109"Link /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C420763012#420763012#0(0"0(0#0#0"12666867880820836#580"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -filelist /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C normal x86_64
+s420765396.381623
+e420765396.451033
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C
+xnormal
+xx86_64
+lSLF07#2@71"Link /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C420765396#420765396#0(0"0(0#0#0"19140500287324276#542"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release -filelist /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Release/C.build/Objects-normal/x86_64/C.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Release/C0#
+
