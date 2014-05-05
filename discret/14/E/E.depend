@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1399304379 source:/home/delf/univerity/c++/discret/14/E/main.cpp
+	<cstdio>
+	<cmath>
+	<climits>
+	<algorithm>
+

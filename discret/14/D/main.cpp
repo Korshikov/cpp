@@ -6,20 +6,21 @@
 using namespace std;
 
 typedef long long int SegmentTreeNodeValueType;
+
 const SegmentTreeNodeValueType netralElement = LLONG_MAX;
 
 struct SegmentTreeNodeModificator{
     long long* seted;
     long long added;
+    unsigned long long setPriority;
+    unsigned long long addPriority;
+
 
     SegmentTreeNodeModificator(){
         seted = NULL;
         added = 0;
-    }
-
-    SegmentTreeNodeModificator(long long* sete,long long adde){
-        seted = sete;
-        added = adde;
+        setPriority=0;
+        addPriority=0;
     }
 
     void setNetral(){
@@ -28,19 +29,18 @@ struct SegmentTreeNodeModificator{
         }
         seted = NULL;
         added = 0;
-
+        setPriority=0;
+        addPriority=0;
     }
 };
 
 struct SegmentTreeNode {
-    //long long left,right;
     SegmentTreeNodeValueType value;
     SegmentTreeNodeModificator modifider;
 
-    SegmentTreeNode() {
+    SegmentTreeNode():modifider(){
         value = netralElement;
     }
-
 };
 
 struct SegmentTree {
@@ -65,12 +65,12 @@ struct SegmentTree {
     }
 
 
-    void addForRange(long long l, long long r, long long value){
-        addForRange(l, r, value, 0, 0, treeN - 1);
+    void addForRange(long long l, long long r, long long value, unsigned long long priority){
+        addForRange(l, r, value, priority, 0, 0, treeN - 1);
     }
 
-    void setForRange(long long l, long long r, long long value){
-        setForRange(l, r, value, 0, 0, treeN - 1);
+    void setForRange(long long l, long long r, long long value, unsigned long long priority){
+        setForRange(l, r, value, priority,0, 0, treeN - 1);
     }
 
 private:
@@ -112,13 +112,18 @@ private:
         }
     }
 
-    void addForRange(long long left, long long right, SegmentTreeNodeValueType added ,long long nodeNumber, long long tLeft, long long tRight){
+    void addForRange(long long left, long long right, SegmentTreeNodeValueType added , unsigned long long priority,long long nodeNumber, long long tLeft, long long tRight){
         if ((left > right)||((added==0)&&(tree[nodeNumber].modifider.added==0))) {
             return;
         }
         if ((left == tLeft) && (right == tRight)) {
             if(left!=right){
+                if(tree[nodeNumber].modifider.setPriority>tree[nodeNumber].modifider.addPriority){
+                    tree[nodeNumber].modifider.added=added;
+                }else{
                 tree[nodeNumber].modifider.added += added;
+                }
+                tree[nodeNumber].modifider.addPriority = priority;
             }
             tree[nodeNumber].value += added;
             updateParentValue(nodeNumber);
@@ -128,11 +133,11 @@ private:
 
         putModifiderDown(nodeNumber);
 
-        addForRange(left, min(right, tMidle), added,nodeNumber * 2 + 1, tLeft, tMidle);
-        addForRange(max(left, tMidle + 1), right, added, nodeNumber * 2 + 2, tMidle + 1, tRight);
+        addForRange(left, min(right, tMidle), added, priority,nodeNumber * 2 + 1, tLeft, tMidle);
+        addForRange(max(left, tMidle + 1), right, added, priority,nodeNumber * 2 + 2, tMidle + 1, tRight);
 
     }
-    void setForRange(long long left, long long right, SegmentTreeNodeValueType seted ,long long nodeNumber, long long tLeft, long long tRight){
+    void setForRange(long long left, long long right, SegmentTreeNodeValueType seted , unsigned long long priority,long long nodeNumber, long long tLeft, long long tRight){
         if (left > right) {
             return;
         }
@@ -142,6 +147,7 @@ private:
         if ((left == tLeft) && (right == tRight)) {
             if(left!=right){
                 tree[nodeNumber].modifider.seted = new SegmentTreeNodeValueType(seted);
+                tree[nodeNumber].modifider.setPriority = priority;
             }
             tree[nodeNumber].value = seted;
             tree[nodeNumber].modifider.added = 0;
@@ -154,13 +160,16 @@ private:
 
         putModifiderDown(nodeNumber);
 
-        setForRange(left, min(right, tMidle), seted,nodeNumber * 2 + 1, tLeft, tMidle);
-        setForRange(max(left, tMidle + 1), right, seted, nodeNumber * 2 + 2, tMidle + 1, tRight);
+        setForRange(left, min(right, tMidle), seted,priority,nodeNumber * 2 + 1, tLeft, tMidle);
+        setForRange(max(left, tMidle + 1), right, seted, priority, nodeNumber * 2 + 2, tMidle + 1, tRight);
 
     }
 
     void putModifiderDown(long long nodeNumber){
         SegmentTreeNodeModificator* modifider = &tree[nodeNumber].modifider;
+        if(modifider->setPriority>modifider->addPriority){
+            modifider->added=0;
+        }
         if((modifider->added!=0)||(modifider->seted!=NULL)){
             if(modifider->seted!=NULL){
                 tree[nodeNumber*2+1].value= *modifider->seted;
@@ -168,6 +177,8 @@ private:
                 if(nodeNumber< treeN-1){
                     tree[nodeNumber*2+1].modifider.seted= new SegmentTreeNodeValueType(*modifider->seted);
                     tree[nodeNumber*2+2].modifider.seted= new SegmentTreeNodeValueType(*modifider->seted);
+                    tree[nodeNumber*2+1].modifider.setPriority= modifider->setPriority;
+                    tree[nodeNumber*2+2].modifider.setPriority= modifider->setPriority;
                 }
             }
             if(modifider->added!= 0){
@@ -176,9 +187,11 @@ private:
                 if(nodeNumber< treeN-1){
                     tree[nodeNumber*2+1].modifider.added= modifider->added;
                     tree[nodeNumber*2+2].modifider.added= modifider->added;
+                    tree[nodeNumber*2+1].modifider.addPriority= max(modifider->addPriority,tree[nodeNumber*2+1].modifider.addPriority);
+                    tree[nodeNumber*2+2].modifider.addPriority= max(modifider->addPriority,tree[nodeNumber*2+2].modifider.addPriority);
                 }
             }
-
+            updateParentValue(nodeNumber*2+1);
             tree[nodeNumber].modifider.setNetral();
         }
     }
@@ -187,20 +200,23 @@ private:
 
 int main() {
     freopen("rmq2.in","r",stdin);
-    freopen("rmq2.out","w+",stdout);
+    //freopen("rmq2.out","w+",stdout);
     long long int n;
     SegmentTreeNodeValueType *a;
 
-    scanf("%lld", &n);
+    scanf("%lld\n", &n);
     a = new SegmentTreeNodeValueType[n];
     for (int i = 0; i < n; i++) {
-        scanf("%lld", &a[i]);
+        scanf("%lld\n", &a[i]);
     }
 
     SegmentTree tree(a, n);
 
+    delete a;
+
     char c;
     long long b1,b2,b3;
+    unsigned long long priority = 0;
 
     while ((scanf("%c",&c)!= EOF)&&(c!= EOF)){
         if(c=='\n'){
@@ -209,7 +225,7 @@ int main() {
         switch(c){
             case 's':
                 scanf("et %lld %lld %lld\n",&b1,&b2, &b3);
-                tree.setForRange(b1-1, b2-1,b3);
+                tree.setForRange(b1-1, b2-1,b3,priority++);
                 break;
             case 'm':
                 scanf("in %lld %lld\n",&b1,&b2);
@@ -217,7 +233,7 @@ int main() {
                 break;
             case 'a':
                 scanf("dd %lld %lld %lld\n",&b1,&b2,&b3);
-                tree.addForRange(b1-1,b2-1,b3);
+                tree.addForRange(b1-1,b2-1,b3,priority++);
         }
     }
 
