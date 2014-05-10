@@ -1,0 +1,64 @@
+TFibonachi_nByMod_appcode
+v7
+r0
+t421362865.594285
+cCheck dependencies
+cCompileC build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug/Fibonachi_nByMod_appcode normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/bits/ios_base.h
+c000000004CC3D87B0000000000006EBA
+t1287903355
+s28346
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug/Fibonachi_nByMod_appcode
+t1399669306
+s10192
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Objects-normal/x86_64/Fibonachi_nByMod_appcode.LinkFileList
+c00000000536D395400000000000000BA
+t1399667028
+s186
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Objects-normal/x86_64/main.o
+t1399669306
+s11188
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/main.cpp
+c00000000536D42380000000000000B34
+t1399669304
+s2868
+i<cstdio>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies421362865#421362865#0(0"0(0#1#0"7953191364024430592#0"0#
+
+CCompileC build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s421362106.007853
+e421362106.400295
+r1
+xCompileC
+xbuild/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/main.cpp421362106#421362106#0(0"0(0#0#91"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/main.cpp8737667583121581056#2081"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Fibonachi_nByMod_appcode-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Fibonachi_nByMod_appcode-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Fibonachi_nByMod_appcode-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Fibonachi_nByMod_appcode-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug/Fibonachi_nByMod_appcode normal x86_64
+s421362106.400551
+e421362106.471875
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug/Fibonachi_nByMod_appcode
+xnormal
+xx86_64
+lSLF07#2@124"Link /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug/Fibonachi_nByMod_appcode421362106#421362106#0(0"0(0#0#0"13229753409208424#786"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Fibonachi_nByMod_appcode.build/Debug/Fibonachi_nByMod_appcode.build/Objects-normal/x86_64/Fibonachi_nByMod_appcode.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/Fibonachi_nByMod_appcode/build/Debug/Fibonachi_nByMod_appcode0#
+
