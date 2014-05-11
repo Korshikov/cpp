@@ -1,0 +1,56 @@
+TproperitarQueue
+v7
+r0
+t421491400.024993
+cCheck dependencies
+cCompileC build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue
+t2
+s0
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/properitarQueue.LinkFileList
+c00000000536F3B47000000000000009F
+t1399798599
+s159
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp
+c00000000536F3B320000000000000C95
+t1399798578
+s3221
+i<iostream>
+i<cstdlib>
+i<cstdio>
+i<climits>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies421491399#421491399#0(0"0(0#1#0"5211871307329008640#0"0#
+
+CCompileC build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s421491399.575867
+e421491400.024745
+r0
+xCompileC
+xbuild/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp: In function 'int main()':
+o/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp:120: error: 'class binary_heap' has no member named 'extract_min'
+lSLF07#2@90"Compile /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp421491399#421491400#0(259"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp: In function 'int main()':/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp:120: error: 'class binary_heap' has no member named 'extract_min'1(4@53"'class binary_heap' has no member named 'extract_min'421491400#110#149#0(6@82"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp421491378#120#0#120#0#27"'*' has no member named '*'0(0#0#82"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp7885630526939279360#1820"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o1#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue normal x86_64
+r0
+

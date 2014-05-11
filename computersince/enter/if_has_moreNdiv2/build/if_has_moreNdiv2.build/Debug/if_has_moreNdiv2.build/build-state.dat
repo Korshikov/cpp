@@ -1,0 +1,60 @@
+Tif_has_moreNdiv2
+v7
+r0
+t421489616.437711
+cCheck dependencies
+cCompileC build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug/if_has_moreNdiv2 normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug/if_has_moreNdiv2
+t1399796816
+s40608
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/Objects-normal/x86_64/if_has_moreNdiv2.LinkFileList
+c00000000536F2F2200000000000000A2
+t1399795490
+s162
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/Objects-normal/x86_64/main.o
+t1399796816
+s90984
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/main.cpp
+c00000000536F344F000000000000027E
+t1399796815
+s638
+i<cstdio>
+i<stack>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies421489616#421489616#0(0"0(0#1#0"5284728088849638400#0"0#
+
+CCompileC build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s421489616.192110
+e421489616.417609
+r1
+xCompileC
+xbuild/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/main.cpp421489616#421489616#0(0"0(0#0#83"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/main.cpp7227825994146340864#1849"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/if_has_moreNdiv2-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/if_has_moreNdiv2-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/if_has_moreNdiv2-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/if_has_moreNdiv2-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug/if_has_moreNdiv2 normal x86_64
+s421489616.417831
+e421489616.437601
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug/if_has_moreNdiv2
+xnormal
+xx86_64
+lSLF07#2@108"Link /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug/if_has_moreNdiv2421489616#421489616#0(0"0(0#0#0"28710898599133288#714"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/if_has_moreNdiv2.build/Debug/if_has_moreNdiv2.build/Objects-normal/x86_64/if_has_moreNdiv2.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/if_has_moreNdiv2/build/Debug/if_has_moreNdiv20#
+

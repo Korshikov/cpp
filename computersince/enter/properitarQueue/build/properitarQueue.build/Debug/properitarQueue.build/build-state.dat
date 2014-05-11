@@ -1,0 +1,62 @@
+TproperitarQueue
+v7
+r0
+t421491775.863872
+cCheck dependencies
+cCompileC build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue
+t1399798975
+s16144
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o
+t1399798975
+s54840
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/properitarQueue.LinkFileList
+c00000000536F3B47000000000000009F
+t1399798599
+s159
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp
+c00000000536F3CBE0000000000000CB4
+t1399798974
+s3252
+i<iostream>
+i<cstdlib>
+i<cstdio>
+i<climits>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies421491775#421491775#0(0"0(0#1#0"5211871307329008640#0"0#
+
+CCompileC build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s421491775.500479
+e421491775.842804
+r1
+xCompileC
+xbuild/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp421491775#421491775#0(0"0(0#0#82"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp7885630526939279360#1820"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/properitarQueue-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue normal x86_64
+s421491775.843022
+e421491775.863757
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue
+xnormal
+xx86_64
+lSLF07#2@106"Link /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue421491775#421491775#0(0"0(0#0#0"31244212048494640#705"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/properitarQueue.build/Debug/properitarQueue.build/Objects-normal/x86_64/properitarQueue.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/properitarQueue/build/Debug/properitarQueue0#
+

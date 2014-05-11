@@ -1,0 +1,62 @@
+TintervalTree
+v7
+r0
+t421492068.820757
+cCheck dependencies
+cCompileC build/intervalTree.build/Debug/intervalTree.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug/intervalTree normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug/intervalTree
+t1399799268
+s15120
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/Objects-normal/x86_64/intervalTree.LinkFileList
+c00000000536F3DE40000000000000096
+t1399799268
+s150
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/Objects-normal/x86_64/main.o
+t1399799268
+s24604
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/main.cpp
+c00000000536F3DC40000000000000CD2
+t1399799236
+s3282
+i<cstdio>
+i<cmath>
+i<climits>
+i<algorithm>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies421492068#421492068#0(0"0(0#1#0"5279993715474057216#0"0#
+
+CCompileC build/intervalTree.build/Debug/intervalTree.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s421492068.279645
+e421492068.802457
+r1
+xCompileC
+xbuild/intervalTree.build/Debug/intervalTree.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/main.cpp421492068#421492068#0(0"0(0#0#79"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/main.cpp7886488416478786560#1733"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/intervalTree-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/intervalTree-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/intervalTree-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/intervalTree-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug/intervalTree normal x86_64
+s421492068.802658
+e421492068.820641
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug/intervalTree
+xnormal
+xx86_64
+lSLF07#2@100"Link /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug/intervalTree421492068#421492068#0(0"0(0#0#0"32088581144313968#678"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/intervalTree.build/Debug/intervalTree.build/Objects-normal/x86_64/intervalTree.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/intervalTree/build/Debug/intervalTree0#
+

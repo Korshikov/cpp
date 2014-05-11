@@ -1,0 +1,59 @@
+Tsnm
+v7
+r0
+t421492545.506899
+cCheck dependencies
+cCompileC build/snm.build/Debug/snm.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug/snm normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug/snm
+t1399799745
+s10888
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/Objects-normal/x86_64/main.o
+t1399799745
+s49268
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/Objects-normal/x86_64/snm.LinkFileList
+c00000000536F3FA0000000000000007B
+t1399799712
+s123
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/main.cpp
+c00000000536F3FC0000000000000045B
+t1399799744
+s1115
+i<iostream>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies421492545#421492545#0(0"0(0#1#0"0#0"0#
+
+CCompileC build/snm.build/Debug/snm.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s421492545.156848
+e421492545.488537
+r1
+xCompileC
+xbuild/snm.build/Debug/snm.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@78"Compile /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/main.cpp421492545#421492545#0(0"0(0#0#70"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/main.cpp7863407194600464384#1472"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/snm-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/snm-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/snm-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/snm-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug/snm normal x86_64
+s421492545.488741
+e421492545.506771
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug/snm
+xnormal
+xx86_64
+lSLF07#2@82"Link /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug/snm421492545#421492545#0(0"0(0#0#0"32088581144313968#597"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/snm.build/Debug/snm.build/Objects-normal/x86_64/snm.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/snm/build/Debug/snm0#
+

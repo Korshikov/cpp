@@ -1,0 +1,62 @@
+TSortHeap
+v7
+r0
+t421517410.901823
+cCheck dependencies
+cCompileC build/SortHeap.build/Debug/SortHeap.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug/SortHeap normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug/SortHeap
+t1399824610
+s16072
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/Objects-normal/x86_64/SortHeap.LinkFileList
+c00000000536FA0E0000000000000008A
+t1399824608
+s138
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/Objects-normal/x86_64/main.o
+t1399824610
+s54032
+
+N/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/main.cpp
+c00000000536FA0DA0000000000000AC2
+t1399824602
+s2754
+i<iostream>
+i<cstdlib>
+i<cstdio>
+i<climits>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies421517406#421517408#0(0"0(0#1#0"5642809484340515840#0"0#
+
+CCompileC build/SortHeap.build/Debug/SortHeap.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s421517408.749415
+e421517410.558245
+r1
+xCompileC
+xbuild/SortHeap.build/Debug/SortHeap.build/Objects-normal/x86_64/main.o
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/main.cpp421517408#421517410#0(0"0(0#0#75"/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/main.cpp3917909816998063104#1617"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/SortHeap-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/SortHeap-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/SortHeap-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/SortHeap-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug/SortHeap normal x86_64
+s421517410.558509
+e421517410.901713
+r1
+xLd
+x/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug/SortHeap
+xnormal
+xx86_64
+lSLF07#2@92"Link /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug/SortHeap421517410#421517410#0(0"0(0#0#0"32088581144313968#642"    cd /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/SortHeap.build/Debug/SortHeap.build/Objects-normal/x86_64/SortHeap.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/computersince/enter/SortHeap/build/Debug/SortHeap0#
+
