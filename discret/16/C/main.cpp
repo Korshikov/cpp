@@ -5,14 +5,58 @@
 
 using namespace std;
 
+
 template<typename T>
-T orderStatistic(T* a,const unsigned& n,unsigned k,unsigned start=0, unsigned end=0)
+T orderStatistic(T* a,const unsigned& n,unsigned k)
 {
-    if(end==0)
-    {
-        end = n-1;
+    unsigned l=0,r=n-1,i,t;
+    T pivot;
+    while(1)
+        {
+        i=l;
+        t=r;
+        pivot = a[l];
+        while(1)
+        {
+            while(a[i++]<pivot)
+            {
+                ;
+            }
+            i--;
+            while(a[t--]>pivot)
+            {
+                ;
+            }
+            t++;
+            if(i<t)
+            {
+                if(a[i]!=a[t])
+                {
+                    swap(a[i],a[t]);
+                }
+                t--;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+
+        if((t==k)||((a[l]==a[t])&&(a[t]==a[r])&&(l<k)&&(k<r)))
+        {
+            return a[k];
+        }
+        if(t>k)
+        {
+            r = t-1;
+        }
+        else
+        {
+            l = t+1;
+        }
     }
-    unsigned pivot_index =
+
 }
 
 int main()
