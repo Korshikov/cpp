@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1400078016 source:/home/delf/univerity/c++/computersince/enter/Qsort/Top_sort/main.cpp
+	<cstdio>
+	<set>
+	<vector>
+

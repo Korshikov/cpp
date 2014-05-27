@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1400071854 source:/home/delf/univerity/c++/computersince/enter/Qsort/BFS/main.cpp
+	<iostream>
+	<set>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1400059560 source:/home/delf/univerity/c++/computersince/enter/Qsort/inv_count/main.cpp
+	<cstdio>
+	<algorithm>
+

@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.9.0 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: /home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort </line>
+</preamble>
+
+<pid>14261</pid>
+<ppid>4157</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind</exe>
+    <arg>--leak-check=full</arg>
+    <arg>--track-origins=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--xml-file=/home/delf/univerity/c++/computersince/enter/Qsort/ValgrindOut.xml</arg>
+  </vargv>
+  <argv>
+    <exe>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</exe>
+    <arg></arg>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.080 </time>
+</status>
+
+<error>
+  <unique>0x3</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4007B9</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>75</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x4</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4C2935D</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x4007CF</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>75</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x5</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4008D4</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>76</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x40097E</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>83</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x7</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x400B38</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>void qSort&lt;point&gt;(point*, point*, bool (*)(point&amp;, point&amp;))</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>36</line>
+    </frame>
+    <frame>
+      <ip>0x4009B5</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>89</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x8</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x400A3A</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>91</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x9</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x400B38</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>void qSort&lt;point&gt;(point*, point*, bool (*)(point&amp;, point&amp;))</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>36</line>
+    </frame>
+    <frame>
+      <ip>0x400A6D</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>98</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xa</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x400AD9</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>99</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x400776</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>71</line>
+    </frame>
+  </stack>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:03:19.711 </time>
+</status>
+
+<error>
+  <unique>0xb</unique>
+  <tid>1</tid>
+  <kind>Leak_DefinitelyLost</kind>
+  <xwhat>
+    <text>0 bytes in 1 blocks are definitely lost in loss record 1 of 1</text>
+    <leakedbytes>0</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C293B0</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x4007CF</ip>
+      <obj>/home/delf/univerity/c++/computersince/enter/Qsort/bin/Debug/Qsort</obj>
+      <fn>main</fn>
+      <dir>/home/delf/univerity/c++/computersince/enter/Qsort</dir>
+      <file>main.cpp</file>
+      <line>75</line>
+    </frame>
+  </stack>
+</error>
+
+<errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0xa</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x9</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x8</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x7</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x6</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x5</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x4</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x3</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+  <pair>
+    <count>3</count>
+    <name>dl-hack3-cond-1</name>
+  </pair>
+</suppcounts>
+
+</valgrindoutput>
+

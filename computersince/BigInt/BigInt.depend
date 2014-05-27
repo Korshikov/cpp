@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1399242027 source:/home/delf/univerity/c++/computersince/BigInt/main.cpp
+	<iostream>
+
+1400671575 source:/home/delf/univerity/c++/computersince/BigInt/src/BigInt.cpp
+	"BigInt.h"
+
+1400696369 /home/delf/univerity/c++/computersince/BigInt/include/BigInt.h
+	<vector>
+

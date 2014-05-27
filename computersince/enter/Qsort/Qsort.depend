@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1400056934 source:/home/delf/univerity/c++/computersince/enter/Qsort/main.cpp
+	<cstdio>
+	<climits>
+

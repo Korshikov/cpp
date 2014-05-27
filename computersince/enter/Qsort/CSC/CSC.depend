@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1400080716 source:/home/delf/univerity/c++/computersince/enter/Qsort/CSC/main.cpp
+	<cstdio>
+	<set>
+	<vector>
+
