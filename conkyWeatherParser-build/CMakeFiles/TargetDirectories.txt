@@ -1,0 +1,1 @@
+/home/delf/univerity/c++/conkyWeatherParser-build/CMakeFiles/conkyWeatherParser.dir

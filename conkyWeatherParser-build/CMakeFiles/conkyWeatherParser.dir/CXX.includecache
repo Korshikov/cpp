@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/delf/conkyWeatherParser/main.cpp
+cstdio
+-
+cstring
+-
+jsoncpp/json/json.h
+/home/delf/conkyWeatherParser/jsoncpp/json/json.h
+

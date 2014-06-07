@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1401991722 source:/home/delf/univerity/c++/FastFourierTransform/main.cpp
+	<algorithm>
+	<cstdio>
+	<vector>
+	<complex>
+

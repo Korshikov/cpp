@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-    freopen("antiqs.in","r",stdin);
-    freopen("antiqs.out","w+",stdout);
+    //freopen("antiqs.in","r",stdin);
+    //freopen("antiqs.out","w+",stdout);
     int n;
     scanf("%d",&n);
     int *a = new int[n+1];

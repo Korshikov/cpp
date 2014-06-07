@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/delf/univerity/c++/bigint/big_integer.cpp
+big_integer.h
+/home/delf/univerity/c++/bigint/big_integer.h
+cstring
+-
+stdexcept
+-
+
+/home/delf/univerity/c++/bigint/big_integer.h
+climits
+-
+vector
+-
+complex
+-
+algorithm
+-
+stdint.h
+-
+
