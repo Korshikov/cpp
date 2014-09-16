@@ -1,0 +1,7 @@
+#ifndef FIB_KORSHIKOV_20140916_H
+#define FIB_KORSHIKOV_20140916_H
+
+long long fib(int a);
+
+#endif //FIB_KORSHIKOV_20140916_H
+
