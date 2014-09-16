@@ -1,4 +1,4 @@
-FILE(REMOVE_RECURSE
+file(REMOVE_RECURSE
   "CMakeFiles/big_integer_testing.dir/big_integer_testing.cpp.o"
   "CMakeFiles/big_integer_testing.dir/big_integer.cpp.o"
   "CMakeFiles/big_integer_testing.dir/gtest/gtest-all.cc.o"
@@ -8,6 +8,6 @@ FILE(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/big_integer_testing.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang CXX)
+  include(CMakeFiles/big_integer_testing.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

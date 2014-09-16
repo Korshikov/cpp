@@ -1,17 +1,19 @@
 # depslib dependency file v1.0
-1402118791 source:/home/delf/univerity/c++/bigint_codebloks/big_integer.cpp
+1403270214 source:/home/delf/univerity/c++/bigint_codebloks/big_integer.cpp
 	"big_integer.h"
 	<cstring>
 	<stdexcept>
+	<cstdio>
+	<iostream>
 
-1402110868 /home/delf/univerity/c++/bigint_codebloks/big_integer.h
+1403269484 /home/delf/univerity/c++/bigint_codebloks/big_integer.h
 	<climits>
 	<vector>
 	<complex>
 	<algorithm>
-	<stdint.h>
+	<cstdint>
 
-1401910222 source:/home/delf/univerity/c++/bigint_codebloks/big_integer_testing.cpp
+1403154545 source:/home/delf/univerity/c++/bigint_codebloks/big_integer_testing.cpp
 	<cassert>
 	<cstdlib>
 	<vector>
@@ -85,17 +87,17 @@
 	<iosfwd>
 	<vector>
 
-1402119113 source:/home/delf/univerity/c++/bigint_codebloks/testing_main.cpp
+1403253592 source:/home/delf/univerity/c++/bigint_codebloks/testing_main.cpp
 	<cstdio>
 	<iostream>
 	<big_integer.h>
 
-1402110868 /home/delf/univerity/c++/bigint_codebloks//big_integer.h
+1403269484 /home/delf/univerity/c++/bigint_codebloks//big_integer.h
 	<climits>
 	<vector>
 	<complex>
 	<algorithm>
-	<stdint.h>
+	<cstdint>
 
 1401225660 source:/home/delf/univerity/c++/bigint_codebloks/gtest/gtest-all.cc
 	<gtest/gtest.h>
@@ -185,4 +187,11 @@
 	<stdio.h>
 	<gtest/gtest.h>
 	<inttypes.h>
+
+1402724790 source:/home/delf/univerity/c++/bigint_codebloks/src/smallVector.cpp
+	"smallVector.h"
+
+1402724695 /home/delf/univerity/c++/bigint_codebloks/include/smallVector.h
+	<vector>
+	<cstdint>
 

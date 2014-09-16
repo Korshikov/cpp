@@ -3,6 +3,9 @@
 #include <cstring>
 #include <stdexcept>
 #include <cstdio>
+#include <iostream>
+
+const big_integer ZERRO = 0, ONE = 1, TEN = 10;
 
 big_integer::big_integer()
 {
@@ -13,8 +16,8 @@ big_integer::big_integer()
 big_integer::big_integer(big_integer const& other)
 {
     data = new DataType(other.data->size());
-    std::copy(other.data->begin(),other.data->end(),data->begin());
-}
+    std::copy(other.data->begin(),other.data->end(),data->begin())
+;}
 
 big_integer::big_integer(DataType::iterator rhsBegin,DataType::iterator rhsEnd)
 {
@@ -22,10 +25,18 @@ big_integer::big_integer(DataType::iterator rhsBegin,DataType::iterator rhsEnd)
     std::copy(rhsBegin,rhsEnd,data->begin());
 }
 
-big_integer::big_integer(int32_t a)
+/*big_integer::big_integer(int32_t a)
 {
     data = new DataType(1);
     data->at(0) =a;
+}*/
+
+big_integer::big_integer(int64_t a)
+{
+    data = new DataType(2);
+    data->at(0) =a;
+    data->at(1) =a>>wordSize;
+    normailze();
 }
 
 big_integer::big_integer(std::string const& str)
@@ -44,9 +55,10 @@ big_integer::big_integer(std::string const& str)
     {
         if((s[i]<='9')&&(s[i]>0))
         {
-            *(this) += big_integer((uint32_t) (s[i]-'0'))*t ;
+            *(this) += mulLongShort(t,(singlWord) (s[i]-'0')) ;
         }
-        t*= 10;
+        t = mulLongShort(t,10);
+        t.normailze();
     }
     if(sing)
     {
@@ -64,16 +76,43 @@ big_integer::~big_integer()
 big_integer& big_integer::normailze()
 {
     DataType::iterator thisData = data->end()-1;
-    if(*(thisData)&1<<31)
+    if(*(thisData)&(1<<(wordSize-1)))
     {
-        for(;(thisData > data->begin())&&(*thisData==4294967295)&&(*(thisData-1)&1<<31);thisData--)
+        for(;(thisData>data->begin())&&(*thisData==4294967295)&&(*(thisData-1)&1<<(wordSize-1));thisData--)
         ;
     }
     else
     {
-        for(;(thisData > data->begin())&&(*thisData==0)&&(!(*(thisData-1)&1<<31));thisData--)
+        for(;(thisData > data->begin())&&(*thisData==0)&&(!(*(thisData-1)&1<<(wordSize-1)));thisData--)
         ;
     }
+    data->resize(thisData-data->begin()+1);
+    return *this;
+}
+/*
+big_integer& big_integer::normailze()
+{
+    DataType::reverse_iterator thisData = data->rbegin();
+    if(*(thisData)&(1<<(wordSize-1)))
+    {
+        for(;(thisData!=data->rend())&&(*thisData==4294967295)&&(*(thisData+1)&1<<(wordSize-1));thisData++)
+        ;
+    }
+    else
+    {
+        for(;(thisData != data->rend())&&(*thisData==0)&&(!(*(thisData+1)&1<<(wordSize-1)));thisData++)
+        ;
+    }
+    data->resize(data->rend()-thisData+1);
+    return *this;
+}*/
+
+
+big_integer& big_integer::absNormailze()
+{
+    DataType::iterator thisData = data->end()-1;
+        for(;(thisData > data->begin())&&(*thisData==0);thisData--)
+        ;
     data->resize(thisData-data->begin()+1);
     return *this;
 }
@@ -90,24 +129,29 @@ big_integer& big_integer::operator=(big_integer const& other)
 
 big_integer& big_integer::operator+=(big_integer const& rhs)
 {
-    uint32_t singleByte = (uint32_t)signByteArray[(*(data->end()-1)&1<<31?1:0)];
-    uint64_t summ=0;
+    singlWord singleByte = (singlWord)signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)];
+    doubleWord summ=0;
     data->resize(std::max(data->size(),rhs.data->size())+1,singleByte);
     DataType::iterator thisData = data->begin(), rhsData = rhs.data->begin();
-    singleByte = (uint32_t)signByteArray[(*(rhs.data->end()-1)&1<<31?1:0)];
+    singleByte = (singlWord)signByteArray[(*(rhs.data->end()-1)&1<<(wordSize-1)?1:0)];
     for(;thisData<data->end();)
     {
         if(rhsData<rhs.data->end())
         {
-            summ += (uint64_t)*(thisData)+(uint64_t)*(rhsData++);
-            *(thisData++) = (uint32_t) summ;
-            summ >>= 32;
+            summ += (doubleWord)*(thisData)+(doubleWord)*(rhsData++);
+            *(thisData++) = (singlWord) summ;
+            summ >>= wordSize;
         }
         else
         {
-            summ += (uint64_t)*(thisData) + (uint64_t) singleByte;
-            *(thisData++) = (uint32_t) summ;
-            summ >>= 32;
+            if(singleByte==0&&summ==0)
+            {
+
+                break;
+            }
+            summ += (doubleWord)*(thisData) + (doubleWord) singleByte;
+            *(thisData++) = (singlWord) summ;
+            summ >>= wordSize;
         }
     }
     (*this).normailze();
@@ -116,23 +160,23 @@ big_integer& big_integer::operator+=(big_integer const& rhs)
 
 big_integer& big_integer::operator-=(big_integer const& rhs)
 {
-    uint32_t singleByte = (uint32_t)signByteArray[(*(data->end()-1)&1<<31?1:0)];
-    uint64_t sub=0;
+    singlWord singleByte = (singlWord)signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)];
+    doubleWord sub=0;
     data->resize(std::max(data->size(),rhs.data->size())+1,singleByte);
     DataType::iterator thisData = data->begin(), rhsData = rhs.data->begin();
-    singleByte = (uint32_t)signByteArray[(*(rhs.data->end()-1)&1<<31?1:0)];
+    singleByte = (singlWord)signByteArray[(*(rhs.data->end()-1)&1<<(wordSize-1)?1:0)];
     for(;thisData<data->end();)
     {
         if(rhsData<rhs.data->end())
         {
-            sub = (uint64_t)*(thisData)-(uint64_t)*(rhsData++)-sub;
-            *(thisData++) = (uint32_t) sub;
+            sub = (doubleWord)*(thisData)-(doubleWord)*(rhsData++)-sub;
+            *(thisData++) = (singlWord) sub;
             sub >>= 63;
         }
         else
         {
-            sub = (uint64_t)*(thisData)-(uint64_t)singleByte-sub;
-            *(thisData++) = (uint32_t) sub;
+            sub = (doubleWord)*(thisData)-(doubleWord)singleByte-sub;
+            *(thisData++) = (singlWord) sub;
             sub >>= 63;
         }
     }
@@ -140,40 +184,99 @@ big_integer& big_integer::operator-=(big_integer const& rhs)
     return *this;
 }
 
-big_integer& big_integer::operator*=(big_integer const& rhs)
+big_integer& big_integer::operator*=(big_integer const& rh)
 {
-    uint32_t thisSingleByte = (uint32_t)signByteArray[(*(data->end()-1)&1<<31?1:0)];
-    uint32_t rhsSingleByte = (uint32_t)signByteArray[(*(rhs.data->end()-1)&1<<31?1:0)];
-    uint32_t n = std::max(data->size(),rhs.data->size())*2;
-    DataType *res = new DataType(n);
-    uint64_t mul=0,sum=0;
-    uint32_t a,b,i,t;
-    for(i=0;i<n;i++)
+    bool sign = (*((this->data->end())-1)&1<<(wordSize-1))^(*(rh.data->end()-1)&1<<(wordSize-1));
+    if((*this)<big_integer(0))
     {
-        if(data->begin()+i<data->end())
+        (*this) = -(*this);
+    }
+    big_integer rhs(rh);
+    if(rhs<big_integer(0))
+    {
+        rhs = -rhs;
+    }
+    DataType::iterator rhsData = rhs.data -> begin();
+    big_integer res = mulLongShort((*this),*(rhsData));
+    rhsData++;
+    singlWord i=1;
+    for(;rhsData<rhs.data->end();rhsData++)
+    {
+        res += mulLongShort((*this),*(rhsData))<<(wordSize*i++);
+    }
+    if(sign)
+    {
+        res = ~res+ONE;
+    }
+
+    res.normailze();
+    (*this) = res;
+
+    return *this;
+}
+
+big_integer mulLongShort(const big_integer& a,const singlWord& b)
+{
+    big_integer res;
+    res.data -> resize(a.data->size()+1,0);
+    doubleWord mul=0;
+    DataType::iterator r=res.data->begin();
+    for(DataType::iterator i=a.data->begin();i<a.data->end();i++,r++)
+    {
+        mul += (doubleWord)*(i)*(doubleWord)b;
+        *(r) = mul;
+        mul >>=wordSize;
+    }
+    (*r)=mul;
+    return res;
+}
+
+/*big_integer& big_integer::operator*=(big_integer const& rh)
+{
+    bool sign = (*((this->data->end())-1)&1<<(wordSize-1))^(*(rh.data->end()-1)&1<<(wordSize-1));
+    if((*this)<big_integer(0))
+    {
+        (*this) = ~(*this)+1;
+    }
+    big_integer rhs(rh);
+    if(rhs<big_integer(0))
+    {
+        rhs = ~rhs+1;
+    }
+    doubleWord n = std::max(data->size(),rhs.data->size())    ;
+    DataType *res = new DataType(n*2+1);
+    doubleWord mul=0,sum=0;
+    doubleWord a,b,i,t;
+    bool flag = 0;
+    for(i=0;i<=n;i++)
+    {
+        if((!flag)&&(data->begin()+i<data->end()))
         {
             a= *(data->begin()+i);
         }
         else
         {
-            a = thisSingleByte;
+            flag = 1;
+            a = 0;
         }
-        for(t = 0; t+i<n;t++)
+        for(t = 0; t+i<=n&&rhs.data->begin()+t<rhs.data->end();t++)
         {
-            if(rhs.data->begin()+t<rhs.data->end())
-            {
-                b= *(rhs.data->begin()+t);
-            }
-            else
-            {
-                b = rhsSingleByte;
-            }
-            mul = (uint64_t)a*(uint64_t)b;
-            sum = (uint64_t)res->at(i+t)+sum+mul;
+            b= *(rhs.data->begin()+t);
+            mul = (doubleWord)a*(doubleWord)b;
+            sum = (doubleWord)res->at(i+t)+sum+mul;
             res->at(i+t) = sum;
-            sum >>= 32;
+            sum >>= wordSize;
         }
-        if(i+t<n)
+        for(; t+i<=n;t++)
+        {
+            //b = 0;
+            //mul = (doubleWord)a*(doubleWord)b;
+            sum = (doubleWord)res->at(i+t)+sum;//+mul;
+            res->at(i+t) = sum;
+            sum >>= wordSize;
+        }
+
+        if(i+t<=2*n)
         {
             res->at(i+t)+=sum;
         }
@@ -182,12 +285,18 @@ big_integer& big_integer::operator*=(big_integer const& rhs)
     }
     delete data;
     data = res;
+    if(sign)
+    {
+        (*this) = ~(*this)+1;
+    }
     normailze();
+
     return *this;
-}
+}*/
 
 big_integer& big_integer::operator/=(big_integer const& rhs)
 {
+
     if (rhs == 0)
     {
         throw std::runtime_error("divide by zero");
@@ -197,9 +306,10 @@ big_integer& big_integer::operator/=(big_integer const& rhs)
         return *this;
     }
 
-    *this = nativeDiv(data->begin(),data->end(),rhs.data->begin(),rhs.data->end()).quotient;
+    *this = Div(*(this),rhs).quotient;
     normailze();
     //mpz_tdiv_q(mpz, mpz, rhs.mpz);
+
     return *this;
 }
 
@@ -214,7 +324,7 @@ big_integer& big_integer::operator%=(big_integer const& rhs)
         return *this;
     }
 
-    *this = nativeDiv(data->begin(),data->end(),rhs.data->begin(),rhs.data->end()).remainder;
+    *this = Div(*(this),rhs).remainder;
     //remainder/mpz_tgreaterdiv_r(mpz, mpz, rhs.mpz);
     normailze();
     return *this;
@@ -222,9 +332,9 @@ big_integer& big_integer::operator%=(big_integer const& rhs)
 
 big_integer& big_integer::operator&=(big_integer const& rhs)
 {
-    uint32_t SingleByte = (uint32_t)signByteArray[(*(data->end()-1)&1<<31?1:0)];
+    singlWord SingleByte = (singlWord)signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)];
     data->resize(std::max(data->end()-data->begin(),rhs.data->end()-rhs.data->begin()),SingleByte);
-    SingleByte = (uint32_t)signByteArray[(*(rhs.data->end()-1)&1<<31?1:0)];
+    SingleByte = (singlWord)signByteArray[(*(rhs.data->end()-1)&1<<(wordSize-1)?1:0)];
     DataType::iterator thisData = data->begin(), rhsData = rhs.data->begin();
     for(;thisData<data->end();thisData++)
     {
@@ -235,9 +345,9 @@ big_integer& big_integer::operator&=(big_integer const& rhs)
 
 big_integer& big_integer::operator|=(big_integer const& rhs)
 {
-    uint32_t SingleByte = (uint32_t)signByteArray[(*(data->end()-1)&1<<31?1:0)];
+    singlWord SingleByte = (singlWord)signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)];
     data->resize(std::max(data->end()-data->begin(),rhs.data->end()-rhs.data->begin()),SingleByte);
-    SingleByte = (uint32_t)signByteArray[(*(rhs.data->end()-1)&1<<31?1:0)];
+    SingleByte = (singlWord)signByteArray[(*(rhs.data->end()-1)&1<<(wordSize-1)?1:0)];
     DataType::iterator thisData = data->begin(), rhsData = rhs.data->begin();
     for(;thisData<data->end();thisData++)
     {
@@ -248,9 +358,9 @@ big_integer& big_integer::operator|=(big_integer const& rhs)
 
 big_integer& big_integer::operator^=(big_integer const& rhs)
 {
-    uint32_t SingleByte = (uint32_t)signByteArray[(*(data->end()-1)&1<<31?1:0)];
+    singlWord SingleByte = (singlWord)signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)];
     data->resize(std::max(data->end()-data->begin(),rhs.data->end()-rhs.data->begin()),SingleByte);
-    SingleByte = (uint32_t)signByteArray[(*(rhs.data->end()-1)&1<<31?1:0)];
+    SingleByte = (singlWord)signByteArray[(*(rhs.data->end()-1)&1<<(wordSize-1)?1:0)];
     DataType::iterator thisData = data->begin(), rhsData = rhs.data->begin();
     for(;thisData<data->end();thisData++)
     {
@@ -259,59 +369,59 @@ big_integer& big_integer::operator^=(big_integer const& rhs)
     return *this;
 }
 
-big_integer& big_integer::operator<<=(int rhs)
+big_integer& big_integer::operator<<=(const int& rhs)
 {
-    if (rhs < 0)
-    {
-        throw std::runtime_error("negative shift");
-    }
+    doubleWord rhsby=rhs/wordSize,rhsbi=rhs%wordSize;
+    DataType *resData = new DataType((singlWord)data->size()+rhsby+1);
 
-    uint32_t rhsby=rhs/32,rhsbi=rhs%32;
-    DataType *resData = new DataType((uint32_t)data->size()+rhsby+1);
-
-    uint64_t shift = 0;
+    doubleWord shift = 0;
     DataType::iterator thisData = data-> begin(),resultData = resData->begin()+rhsby;
     for(;thisData<data->end();)
     {
-        shift = (uint64_t)shift | (uint64_t)*(thisData++)<<rhsbi;
+        shift = (doubleWord)shift | (doubleWord)*(thisData++)<<rhsbi;
         *(resultData++) = shift;
-        shift >>= 32;
+        shift >>= wordSize;
     }
-    shift = shift | signByteArray[(*(data->end()-1)&1<<31?1:0)]<<rhsbi;
-    *(resultData++) = shift;
-
+    shift = shift | signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)]<<rhsbi;
+    if(shift!=0)
+        {
+            *(resultData++) = shift;
+        }
     delete data;
+    /*while((*resultData == 0))
+    {
+        ;
+    }
+*/
+    //resData->resize(resultData-resData->begin()>0?resultData-resData->begin():1);
     data = resData;
+    //if(*(data->end()-1)==0
     normailze();
     return *this;
 }
 
-big_integer& big_integer::operator>>=(int rhs)
+big_integer& big_integer::operator>>=(const int& rhs)
 {
-    if (rhs < 0)
-    {
-        throw std::runtime_error("negative shift");
-    }
-    uint32_t rhsby=rhs/32,rhsbi=rhs%32;
-    DataType *resData = new DataType((data->size()>rhsby?(uint32_t)data->size()-rhsby:1));
+    doubleWord rhsby=rhs/wordSize,rhsbi=rhs%wordSize;
+    DataType *resData = new DataType((data->size()>rhsby?(singlWord)data->size()-rhsby:1));
 
-    uint64_t shift = 0;
+    doubleWord shift = 0;
     DataType::iterator thisData = data-> end()-1,resultData = resData->end()-1;
-    shift = (uint64_t)signByteArray[(*(data->end()-1)&1<<31?1:0)]<<32;
-    if(thisData<data->begin()+rhs/32)
+    shift = (doubleWord)signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)]<<wordSize;
+    if(thisData<data->begin()+rhs/wordSize)
     {
-        *(resultData)=signByteArray[(*(data->end()-1)&1<<31?1:0)];
+        *(resultData)=signByteArray[(*(data->end()-1)&1<<(wordSize-1)?1:0)];
     }
-    for(;thisData>=data->begin()+rhs/32;)
+    for(;thisData>=data->begin()+rhs/wordSize;)
     {
         shift = shift | *(thisData--);
         *(resultData--) = shift>>rhsbi;
-        shift <<= 32;
+        shift <<= wordSize;
     }
 
     delete data;
     data = resData;
-    normailze();
+    //normailze();
     return *this;
 }
 
@@ -459,22 +569,11 @@ std::string to_string(big_integer const& a)
         sign = true;
         c = ~a+1;
     }
-    big_integer(1);
-    while(c!=0)
+    while(c>0)
     {
-        for(DataType::iterator i = b.data->end()-1; i>= b.data->begin();i--)
-    {
-        std::printf("%08X",*(i));
-    }
-    std::printf("\n");
-        for(DataType::iterator i = c.data->end()-1; i>= c.data->begin();i--)
-    {
-        std::printf("%08X",*(i));
-    }
-    std::printf("\n");
-        b = c%10;
-        res =  (char)((char)*(b.data->begin())+'0')+res;
-        c/=10;
+        b = c%TEN;
+        res =  (char)(*(b.data->begin())+'0')+res;
+        c/=TEN;
     }
 
     if(sign)
@@ -492,76 +591,218 @@ std::ostream& operator<<(std::ostream& s, big_integer const& a)
 
 int8_t compare(big_integer const& a,big_integer const& b)
 {
-    big_integer c = a-b;
-    if((c.data->size()==1)&&(*c.data->begin()==0))
-    {
-        return 0;
-    }
-    if(*(c.data->end()-1)&1<<31)
+    bool asign = *(a.data->end()-1)&1<<(wordSize-1);
+    bool bsign = *(b.data->end()-1)&1<<(wordSize-1);
+    if(asign&&(!bsign))
     {
         return -1;
     }
-    else
+    if((!asign)&&bsign)
     {
         return 1;
     }
+    DataType::iterator aData = a.data->end()-1,bData = b.data->end()-1;
+    if(asign)
+    {
+        for(;(aData>a.data->begin())&&(*aData==4294967295);aData--)
+        ;
+    }
+    else
+    {
+        for(;(aData > a.data->begin())&&(*aData==0);aData--)
+        ;
+    }
+
+    if(bsign)
+    {
+        for(;(bData>b.data->begin())&&(*bData==4294967295);bData--)
+        ;
+    }
+    else
+    {
+        for(;(bData > b.data->begin())&&(*bData==0);bData--)
+        ;
+    }
+    if((a.data->end()-aData)>(b.data->end()-bData))
+    {
+        if(asign)
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    if((a.data->end()-aData)<(b.data->end()-bData))
+    {
+        if(asign)
+        {
+            return 1;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    //size(a)==size(b), singl a== singl b;
+    while(aData>= a.data->begin())
+    {
+        if(*aData>*bData)
+        {
+            if(asign)
+            {
+                return -1;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        if(*aData<*bData)
+        {
+            if(asign)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        aData--;bData--;
+    }
+    return 0;
 }
 
-diviPair nativeDiv(DataType::iterator aBegin,DataType::iterator aEnd,DataType::iterator bBegin,DataType::iterator bEnd)
+diviPair Div(big_integer& a,const big_integer& b)
 {
-    bool sign = (*(aEnd-1)&1<<31)^(*(bEnd-1)&1<<31);
-    big_integer a(aBegin,aEnd),b(bBegin,bEnd);
-    if(a<big_integer(0))
+    bool sign = (*(a.data->end()-1)&1<<(wordSize-1))^(*(b.data->end()-1)&1<<(wordSize-1));
+    big_integer ao(a),bo(b);
+    if((*(a.data->end()-1)&1<<(wordSize-1)))
     {
-        a = ~a+1;
+        ao = ~a+ONE;
     }
-    if(b<big_integer(0))
+    if((*(b.data->end()-1)&1<<(wordSize-1)))
     {
-        b = ~b+1;
+        bo = ~b+ONE;
     }
-
-    diviPair res = insideNativeDiv(a,b);
+    singlWord m = (ao.data->size())-(bo.data->size()), n = (b.data->size());
+    if(*(bo.data->end()-1)==0)
+    {
+        m++;
+        n--;
+    }
+    diviPair res ;
+    if((n>=m)&&(m>10))
+    {
+        res = recursiveDivRem(ao,bo);
+    }
+    else
+    if(0&&(m>5)&&(*(a.data->end()-1)<*(b.data->end()-1)))
+    {
+        res= SvobodaDiv(ao,bo);
+    }
+    else
+    {
+        res= insideNativeDiv(ao,bo);
+    }
     if(sign)
     {
-        res.quotient = ~res.quotient+1;
+        res.quotient = ~res.quotient+ONE;
     }
-    if(*(aEnd-1)&1<<31)
+    if(*(a.data->end()-1)&1<<(wordSize-1))
     {
-        res.remainder = ~res.remainder +1;
+        res.remainder = ~res.remainder +ONE;
     }
     return res;
 }
 
 
-diviPair insideNativeDiv(big_integer& a,big_integer& b)
+diviPair insideNativeDiv(big_integer& a,big_integer b)
 {
     big_integer q;
-    uint32_t m = (a.data->end()-a.data->begin())-(b.data->end()-b.data->begin()), n = (b.data->end()-b.data->begin());
-    uint64_t qn;
-    q.data->resize(m+1);
-    if(a>=((big_integer(1)<<(32*m))*b))
+    doubleWord m = (a.data->end()-a.data->begin())-(b.data->end()-b.data->begin()), n = (b.data->end()-b.data->begin());
+    doubleWord qn;
+    singlWord mov=0;
+    if(*(b.data->end()-1)==0)
     {
-        q.data->at(m) = *(a.data->end()-1)/ *(b.data->end()-1);
-        if(a<((big_integer(1)<<(32*m))*b)*q.data->at(m))
+        m++;
+        n--;
+        mov=1;
+    }
+    q.data->resize(m+1);
+    if(a>=((b<<(wordSize*m))))
+    {
+        q.data->at(m) = *(a.data->end()-1)/ *(b.data->end()-1-mov);
+        while(a<(((q.data->at(m)*b)<<(wordSize*m))))
         {
             q.data->at(m)--;
         }
-        a -= (big_integer(1)<<32*m)*b*q.data->at(m);
+        a -= (((q.data->at(m)*b)<<(wordSize*m)));
+
+        /*q.data->at(m) = 1;
+        a -= (b)<<(wordSize*m)*/
     }
     else
     {
         q.data->at(m)=0;
     }
-    for(uint32_t t= m-1;t<=0;t--)
+    big_integer bufer;
+    for(int64_t t= m-1;t>=0;t--)
     {
 
-        qn = (((uint64_t)a.data->at(n+t)<<32)+(uint64_t)a.data->at(n+t-1))/(uint64_t)b.data->at(n-1);
-        qn = std::min(qn,(uint64_t) signByteArray[1]);
-        a-= big_integer((uint32_t)qn)*(b<<(32*t));
-        while(a<0)
+        qn = (((n+t<a.data->size()?(doubleWord)a.data->at(n+t)<<wordSize:0))+(n+t-1<a.data->size()?(doubleWord)a.data->at(n+t-1):0))/((doubleWord)b.data->at(n-1));
+        qn = std::min(qn,(doubleWord) signByteArray[1]);
+        a-=  mulLongShort((b<<(wordSize*t)),qn);
+        bufer = (b<<(wordSize*t))<<16;
+        while(*(a.data->end()-1)&1<<(wordSize-1))
         {
-            qn--;
-            a+=(b<<(32*t));
+            qn-=1<<16;
+            a+=bufer;
+        }
+        qn+=1<<16;
+        a-=bufer;
+
+                bufer = (b<<(wordSize*t))<<8;
+                while(*(a.data->end()-1)&1<<(wordSize-1))
+                {
+                    qn-=1<<8;
+                    a+=bufer;
+                }
+                qn+=1<<8;
+                a-=bufer;
+                bufer >>= 4;
+                while(*(a.data->end()-1)&1<<(wordSize-1))
+                {
+                    qn-=1<<4;
+                    a+=bufer;
+                }
+                qn+=1<<4;
+                a-=bufer;
+
+        bufer >>=2;
+        while(*(a.data->end()-1)&1<<(wordSize-1))
+        {
+            qn-=1<<2;
+            a+=bufer;
+        }
+        qn+=1<<2;
+        a-=bufer;
+        bufer >>=1;
+        while(*(a.data->end()-1)&1<<(wordSize-1))
+        {
+            qn-=1<<1;
+            a+=bufer;
+        }
+        qn+=1<<1;
+        a-=bufer;
+        bufer >>=1;
+        while(*(a.data->end()-1)&1<<(wordSize-1))
+        {
+            qn-=1;
+            a+=bufer;
         }
         q.data->at(t)=qn;
     }
@@ -569,5 +810,170 @@ diviPair insideNativeDiv(big_integer& a,big_integer& b)
     res.quotient = q;
     res.remainder = a;
 
+    return res;
+}
+
+
+
+
+/*
+diviPair insideNativeDiv(big_integer& a, big_integer b)
+{
+    big_integer q,tmp;
+    doubleWord m = (a.data->end()-a.data->begin())-(b.data->end()-b.data->begin()), n = (b.data->end()-b.data->begin());
+    singlWord mov=0;
+    if(*(b.data->end()-1)==0)
+    {
+        m++;
+        n--;
+        mov=1;
+    }
+    q.data->resize(m+1);
+
+    if((*(b.data->end()-1-mov)) < ((singlWord)1<<(wordSize-1)))
+    {
+        singlWord shift = log2(*(b.data->end()-1-mov));
+        b<<=shift;
+        a<<=shift;
+    }
+
+    if(*(a.data->end()-1)>*(b.data->end()-1-mov))
+    {
+        q.data->at(m) = 1;
+        a -= b<<(wordSize*m);
+    }
+    else
+    {
+        q.data->at(m)=0;
+    }
+
+    for(int i = m-1;i>=0;i--)
+    {
+
+
+        singlWord vsize = a.data->size(), rsize = b.data->size();
+        singlWord u1 = a.data->at(vsize - 1),
+                 u2 = vsize - 2 >= 0 ? a.data->at(vsize - 2) : 0,
+                 u3 = (vsize - 3 >= 0) ? a.data->at(vsize - 3) : 0,
+                 v1 = b.data->at(rsize - 1),
+                 v2 = (rsize - 2 >= 0) ? b.data->at(rsize - 2) : 0;
+         doubleWord u = u1 > v1 ? u1 : ((doubleWord)u1 << (wordSize)) | u2;
+         doubleWord stq = std::min(u / v1, (doubleWord)signByteArray[1]), str = u % v1;
+         singlWord it = 0;
+         do {
+             if (stq == (doubleWord)1<<(wordSize) || stq * v2 > (str << wordSize) + u3) {
+                 stq--;
+                 str += v1;
+             }
+         } while(str < (doubleWord)1<<(wordSize) && ++it < 2);
+         tmp = b;
+         tmp= mulLongShort(tmp, stq);
+         u_int8_t result = compare(a, tmp<<(i*wordSize));
+         if (result >= 0) {
+             tmp <<= i * wordSize;
+             a -= tmp;
+             q.data->at(i) = stq;
+             if (result == 0) {
+                 break;
+             }
+         } else {
+             q.data->at(i) = 0;
+         }
+     }
+
+    diviPair res;
+    res.quotient = q;
+    res.remainder = a;
+
+    return res;
+}
+*/
+
+
+
+
+diviPair SvobodaDiv(big_integer a ,big_integer& b)
+{
+    doubleWord m = (a.data->end()-a.data->begin())-(b.data->end()-b.data->begin()), n = (b.data->end()-b.data->begin());
+    if(*(b.data->end()-1)==0)
+    {
+        m++;
+        n--;
+    }
+    big_integer k = (ONE<<(wordSize*(n+1)));
+    diviPair buf = Div(k,b);
+    k = buf.quotient;
+    big_integer q;
+    q.data->resize(m);
+    if (buf.remainder>ZERRO)
+    {
+        k+=ONE;
+    }
+    big_integer b1 = k*b;
+    for(singlWord i = m-1;i>0;i--)
+    {
+        q.data->at(i) =  (a.data->size()<n+i? a.data->at(n+i):0);
+        a-=mulLongShort(b1,q.data->at(i))<<(wordSize*(i-1));
+        while(*(a.data->end()-1)&1<<(wordSize-1))
+        {
+            q.data->at(i)--;
+            a +=  b1 << (wordSize*(i-1));
+        }
+    }
+    diviPair res;
+    res.quotient=b;
+    res.quotient.data->resize(m);
+    res.quotient>>=wordSize;
+    res.quotient<<=wordSize;
+    buf = insideNativeDiv(a,b);
+    res.quotient = res.quotient*k+q.data->at(0);
+    res.remainder = buf.remainder;
+    return res;
+}
+
+diviPair recursiveDivRem(big_integer a,const big_integer& b)
+{
+    big_integer q,b1,b0,a_,a__;
+    singlWord m = (a.data->size())-(b.data->size()) , n =b.data->size();
+    if(*(b.data->end()-1)==0)
+    {
+        m++;
+        n--;
+    }
+    if((m<2)||(m>n))
+    {
+        return insideNativeDiv(a,b);
+    }
+    singlWord k = m/2;
+    b1 = b>>(wordSize*k);
+    b0 = b;
+    b0.data->resize(k);
+    diviPair res0,res1;
+    res1 = recursiveDivRem(a>>(wordSize*2*k),b1);
+    res1.quotient.absNormailze();
+    res1.remainder.absNormailze();
+    a.data->resize(k);
+    a_ = (res1.remainder<<(wordSize*2*k))+a-res1.quotient*b0<<(wordSize*k);
+    big_integer bufer = b<<(wordSize*k);
+    while(*(a_.data->end()-1)&1<<(wordSize-1))
+    {
+        res1.quotient--;
+        a_+=bufer;
+    }
+    res0 = recursiveDivRem(a_>>(wordSize*k),b1);
+    res0.quotient.absNormailze();
+    res0.remainder.absNormailze();
+    a_.data->resize(k);
+    a__ = (res0.remainder<<(wordSize*k)) + a_- res0.quotient*b0;
+    while(*(a__.data->end()-1)&1<<(wordSize-1))
+    {
+        res0.quotient--;
+        a__+=b;
+    }
+    diviPair res;
+    res.quotient = (res1.quotient << (wordSize*k)) + res0.quotient;
+    res.remainder = a__;
+    res.quotient.absNormailze();
+    res.remainder.absNormailze();
     return res;
 }

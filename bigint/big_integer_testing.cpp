@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <vector>
 #include <utility>
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 
 #include "big_integer.h"
 
@@ -537,7 +537,7 @@ TEST(correctness, string_conv)
 namespace
 {
     unsigned const number_of_iterations = 10;
-    size_t const number_of_multipliers = 1000;
+    size_t const number_of_multipliers = 7;
 
     int myrand()
     {
