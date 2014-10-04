@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1403270214 source:/home/delf/univerity/c++/bigint_codebloks/big_integer.cpp
+1411629922 source:/home/delf/univerity/c++/bigint_codebloks/big_integer.cpp
 	"big_integer.h"
 	<cstring>
 	<stdexcept>
 	<cstdio>
 	<iostream>
 
-1403269484 /home/delf/univerity/c++/bigint_codebloks/big_integer.h
+1411629859 /home/delf/univerity/c++/bigint_codebloks/big_integer.h
 	<climits>
 	<vector>
 	<complex>
@@ -87,12 +87,12 @@
 	<iosfwd>
 	<vector>
 
-1403253592 source:/home/delf/univerity/c++/bigint_codebloks/testing_main.cpp
+1411629125 source:/home/delf/univerity/c++/bigint_codebloks/testing_main.cpp
 	<cstdio>
 	<iostream>
 	<big_integer.h>
 
-1403269484 /home/delf/univerity/c++/bigint_codebloks//big_integer.h
+1411629859 /home/delf/univerity/c++/bigint_codebloks//big_integer.h
 	<climits>
 	<vector>
 	<complex>
