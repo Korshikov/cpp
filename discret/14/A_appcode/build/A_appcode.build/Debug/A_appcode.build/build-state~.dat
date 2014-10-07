@@ -1,63 +1,0 @@
-TA_appcode
-v7
-r0
-t420676341.591922
-cCheck dependencies
-cCompileC build/A_appcode.build/Debug/A_appcode.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug/A_appcode normal x86_64
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004D5A274300000000000000EE
-t1297753923
-s238
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/Objects-normal/x86_64/A_appcode.LinkFileList
-c000000005362CB740000000000000084
-t1398983540
-s132
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/Objects-normal/x86_64/main.o
-t1398983541
-s22708
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug/A_appcode
-t1398983541
-s10816
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/main.cpp
-c000000005362CB710000000000000932
-t1398983537
-s2354
-i<cstdio>
-i<cstdlib>
-i<cmath>
-i<climits>
-i<algorithm>
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies420676340#420676340#0(0"0(0#1#0"5283920084686292992#0"0#
-
-CCompileC build/A_appcode.build/Debug/A_appcode.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s420676340.991259
-e420676341.324480
-r1
-xCompileC
-xbuild/A_appcode.build/Debug/A_appcode.build/Objects-normal/x86_64/main.o
-x/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/main.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@75"Compile /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/main.cpp420676341#420676341#0(0"0(0#0#67"/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/main.cpp3907004821821025792#1547"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/A_appcode-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/A_appcode-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/A_appcode-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/A_appcode-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/Objects-normal/x86_64/main.o0#
-
-CLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug/A_appcode normal x86_64
-s420676341.324694
-e420676341.591800
-r1
-xLd
-x/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug/A_appcode
-xnormal
-xx86_64
-lSLF07#2@85"Link /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug/A_appcode420676341#420676341#0(0"0(0#0#0"28147974418923632#606"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/A_appcode.build/Debug/A_appcode.build/Objects-normal/x86_64/A_appcode.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/A_appcode/build/Debug/A_appcode0#
-

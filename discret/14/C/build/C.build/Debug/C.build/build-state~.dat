@@ -1,72 +1,0 @@
-TC
-v7
-r0
-t420751646.278382
-cCheck dependencies
-cCompileC build/C.build/Debug/C.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004D5A274300000000000000EE
-t1297753923
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/bits/ios_base.h
-c000000004CC3D87B0000000000006EBA
-t1287903355
-s28346
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/C.LinkFileList
-c000000005363F19D000000000000006C
-t1399058845
-s108
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/main.o
-t2
-s0
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C
-t2
-s0
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp
-c000000005363F19C000000000000134D
-t1399058844
-s4941
-i<cstdio>
-i<cmath>
-i<algorithm>
-i<c++/4.2.1/bits/ios_base.h>
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies420751644#420751645#0(0"0(0#1#0"0#0"0#
-
-CCompileC build/C.build/Debug/C.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s420751645.904061
-e420751646.278068
-r0
-xCompileC
-xbuild/C.build/Debug/C.build/Objects-normal/x86_64/main.o
-x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:23: error: 'const SegmentTreeNodeValueType SegmentTreeNodeValueType::operator*(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take either zero or one argument
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:27: error: 'bool SegmentTreeNodeValueType::operator!=(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take exactly one argument
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:42: error: 'const SegmentTreeNodeValueType SegmentTreeNodeValueType::operator*(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take either zero or one argument
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In member function 'SegmentTreeNodeValueType SegmentTree::functionInNode(SegmentTreeNodeValueType, SegmentTreeNodeValueType)':
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:98: error: no match for 'operator*' in 'left * right'
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In member function 'void SegmentTree::updateParentValue(long long int)':
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:122: error: no match for 'operator!=' in '(((SegmentTree*)this)->SegmentTree::tree + ((SegmentTreeNode*)(((long unsigned int)parentNumber) * 32ul)))->SegmentTreeNode::value != newValue'
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In function 'int main()':
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:139: warning: format '%lld' expects type 'long long int*', but argument 2 has type 'SegmentTreeNodeValueType*'
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:155: error: no matching function for call to 'SegmentTree::modifideList(long long int, long long int&)'
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:87: note: candidates are: void SegmentTree::modifideList(long long int, SegmentTreeNodeValueType)
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:158: warning: cannot pass objects of non-POD type 'struct SegmentTreeNodeValueType' through '...'; call will abort at runtime
-o/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:158: warning: format '%lld' expects type 'long long int', but argument 2 has type 'int'
-lSLF07#2@67"Compile /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751645#420751646#0(2296"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:23: error: 'const SegmentTreeNodeValueType SegmentTreeNodeValueType::operator*(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take either zero or one argument/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:27: error: 'bool SegmentTreeNodeValueType::operator!=(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take exactly one argument/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:42: error: 'const SegmentTreeNodeValueType SegmentTreeNodeValueType::operator*(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take either zero or one argument/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In member function 'SegmentTreeNodeValueType SegmentTree::functionInNode(SegmentTreeNodeValueType, SegmentTreeNodeValueType)':/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:98: error: no match for 'operator*' in 'left * right'/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In member function 'void SegmentTree::updateParentValue(long long int)':/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:122: error: no match for 'operator!=' in '(((SegmentTree*)this)->SegmentTree::tree + ((SegmentTreeNode*)(((long unsigned int)parentNumber) * 32ul)))->SegmentTreeNode::value != newValue'/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp: In function 'int main()':/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:139: warning: format '%lld' expects type 'long long int*', but argument 2 has type 'SegmentTreeNodeValueType*'/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:155: error: no matching function for call to 'SegmentTree::modifideList(long long int, long long int&)'/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:87: note: candidates are: void SegmentTree::modifideList(long long int, SegmentTreeNodeValueType)/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:158: warning: cannot pass objects of non-POD type 'struct SegmentTreeNodeValueType' through '...'; call will abort at runtime/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp:158: warning: format '%lld' expects type 'long long int', but argument 2 has type 'int'10(4@172"'const SegmentTreeNodeValueType SegmentTreeNodeValueType::operator*(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take either zero or one argument420751646#0#244#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#23#0#23#0#0"0(4@140"'bool SegmentTreeNodeValueType::operator!=(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take exactly one argument420751646#244#212#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#27#0#27#0#0"0(4@172"'const SegmentTreeNodeValueType SegmentTreeNodeValueType::operator*(const SegmentTreeNodeValueType&, const SegmentTreeNodeValueType&)' must take either zero or one argument420751646#456#244#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#42#0#42#0#0"0(4@42"No match for 'operator*' in 'left * right'420751646#888#114#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#98#0#98#0#0"0(4@173"No match for 'operator!=' in '(((SegmentTree*)this)->SegmentTree::tree + ((SegmentTreeNode*)(((long unsigned int)parentNumber) * 32ul)))->SegmentTreeNode::value != newValue'420751646#1136#246#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#122#0#122#0#0"0(22@96"Format '%lld' expects type 'long long int*', but argument 2 has type 'SegmentTreeNodeValueType*'420751646#1469#171#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#139#0#139#0#56"format '*' expects type '*', but argument * has type '*'0(4@91"No matching function for call to 'SegmentTree::modifideList(long long int, long long int&)'420751646#1640#164#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#155#0#155#0#0"0(13@87"Candidates are: void SegmentTree::modifideList(long long int, SegmentTreeNodeValueType)420751646#1804#158#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#87#0#87#0#0"0(22@111"Cannot pass objects of non-POD type 'struct SegmentTreeNodeValueType' through '...'; call will abort at runtime420751646#1962#186#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#158#0#158#0#0"0(22@73"Format '%lld' expects type 'long long int', but argument 2 has type 'int'420751646#2148#148#0(6@59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420751644#158#0#158#0#56"format '*' expects type '*', but argument * has type '*'0(0#0#59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp3345727440346443776#1315"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/main.o1#
-
-CLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C normal x86_64
-r0
-

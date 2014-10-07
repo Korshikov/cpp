@@ -1,89 +1,0 @@
-TC
-v7
-r0
-t420765830.241487
-cCheck dependencies
-cCompileC build/C.build/Debug/C.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C normal x86_64
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004D5A274300000000000000EE
-t1297753923
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/bits/ios_base.h
-c000000004CC3D87B0000000000006EBA
-t1287903355
-s28346
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/C.LinkFileList
-c000000005364157D000000000000006C
-t1399068029
-s108
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/main.o
-t1399073030
-s29752
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/testGenerator.o
-t1399067781
-s75588
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C
-t1399073030
-s16280
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp
-c00000000536429030000000000001415
-t1399073027
-s5141
-i<cstdio>
-i<cmath>
-i<algorithm>
-
-N/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/testGenerator.cpp
-c0000000053641482000000000000021E
-t1399067778
-s542
-i<fstream>
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies420765829#420765830#0(0"0(0#1#0"0#0"0#
-
-CCompileC build/C.build/Debug/C.build/Objects-normal/x86_64/main.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s420765830.044075
-e420765830.221774
-r1
-xCompileC
-xbuild/C.build/Debug/C.build/Objects-normal/x86_64/main.o
-x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp420765830#420765830#0(0"0(0#0#59"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp3345727440346443776#1315"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/main.cpp -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/main.o0#
-
-CCompileC build/C.build/Debug/C.build/Objects-normal/x86_64/testGenerator.o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/testGenerator.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s420760581.272807
-e420760581.817360
-r1
-xCompileC
-xbuild/C.build/Debug/C.build/Objects-normal/x86_64/testGenerator.o
-x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/testGenerator.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@76"Compile /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/testGenerator.cpp420760581#420760581#0(0"0(0#0#68"/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/testGenerator.cpp8031151179464336384#1333"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-generated-files.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-own-target-headers.hmap -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-all-target-headers.hmap -iquote /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/C-project-headers.hmap -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/include -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/DerivedSources/x86_64 -I/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/DerivedSources -c /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/testGenerator.cpp -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/testGenerator.o0#
-
-CLd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C normal x86_64
-s420765830.222099
-e420765830.241379
-r1
-xLd
-x/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C
-xnormal
-xx86_64
-lSLF07#2@69"Link /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C420765830#420765830#0(0"0(0#0#0"19140500287324276#534"    cd /Users/tatana/Documents/Delf/cpp_2014/discret/14/C    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug -F/Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug -filelist /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/C.build/Debug/C.build/Objects-normal/x86_64/C.LinkFileList -mmacosx-version-min=10.6 -o /Users/tatana/Documents/Delf/cpp_2014/discret/14/C/build/Debug/C0#
-
