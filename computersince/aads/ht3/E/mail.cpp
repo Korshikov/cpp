@@ -1,11 +1,12 @@
 #include <cstdio>
+#include <algorithm>
 #include <climits>
 
 using namespace std;
 
 struct point{
-    long long position;
-    int type;
+    int position;
+    long long type;
     unsigned number;
 
     point& operator= (const point& data){
@@ -35,8 +36,8 @@ template<typename T>
 void qSort(T* aBegin,T* aEnd, bool (*comp)(T&,T&)){
     T x=*(aBegin+(aEnd-aBegin)/2);
     T t;
-    long long i=0;
-    long long j = aEnd-aBegin-1;
+    int i=0;
+    int j = aEnd-aBegin-1;
     do{
         while(comp(aBegin[i],x)){
             i++;
@@ -94,12 +95,14 @@ int qSortPartition(T* aBegin,T* aEnd, bool (*comp)(T&,T&)){
 
 int main()
 {
-    int n,m,l;
+    int n,m,l,b1,b2;
     scanf("%d %d",&n,&m);
     l=2*n+m;
     point* arra = new point[l];
     for(int i=0;i<n;i++){
-        scanf("%d %d",&arra[i*2].position,&arra[i*2+1].position);
+        scanf("%d %d",&b1,&b2);
+        arra[i*2].position = min(b1,b2);
+        arra[i*2+1].position= max(b1,b2);
         arra[i*2+0].type = 1;
         arra[i*2+0].number = UINT_MAX;
         arra[i*2+1].type = -1;
