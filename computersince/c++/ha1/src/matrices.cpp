@@ -8,30 +8,29 @@ matrices::matrices(size_t x,size_t y):
 
 matrices::matrices(char* file_name)
 {
-    std::ifstream in(file_name);
-    std::streambuf *cinbuf = std::cin.rdbuf();
-    std::cin.rdbuf(in.rdbuf());
-
-    std::cin >> x >> y;
-
-    std::cin.rdbuf(cinbuf);
-
+    freopen(file_name,"r",stdin);
+    int b1,b2;
+    scanf("%d %d",&b1,&b2);
+    float t;
     data.resize(x*y);
-
-    for(size_t i = 0;i < x*y;++i)
+    for(size_t i=0;i<x*y;++i)
     {
-        std::cin >> data[i];
+        scanf("%f",&t);
+        data[i] = (double) t;
     }
+    fclose(stdin);
 }
 
 void matrices::print()
 {
-    std::cout << x << y;
+    printf("%d %d",(int) x,(int) y);
+    float t;
     for(size_t i=0;i<x*y;++i)
     {
         if(i%x==0)
         {
-            std::cout << std::endl;
+            printf("\n");
+            t +=
         }
         std::cout << data[i] << " ";
     }

@@ -7,15 +7,15 @@
 using namespace std;
 
 int n,m,s,f;
-const int MAX_N = 30000;
+const int MAX_N = 2000;
 const int INF = 1073741824;
 vector< pair<int,int> >  graph[MAX_N];
 
 
 int main()
 {
-    freopen("pathsg.in","r",stdin);
-    //freopen("pathsg.out","w+",stdout);
+    freopen("pathmgep.in","r",stdin);
+    freopen("pathmgep.out","w+",stdout);
 
     /*scanf("%d %d",&n,&m);
     
@@ -43,16 +43,17 @@ int main()
     		}
     	}
     }
+
     vector<int> distance(n,INF);
     vector<int> parent(n);
-    distance[0] = 0;
+    distance[s] = 0;
     set< pair<int,int> > queue;
-	queue.insert(make_pair(0,0));
+	queue.insert(make_pair(distance[s],s));
 
 	while (!queue.empty()) 
 	{
 		int v = queue.begin()->second;
-		queue.erase (queue.begin());
+		queue.erase(queue.begin());
  
 		for (vector< pair<int,int> >::iterator i = graph[v].begin();i!=graph[v].end();++i) 
 		{
@@ -65,11 +66,13 @@ int main()
 			}
 		}
 	}
-
+/*
 	for(vector<int>::iterator i = distance.begin();i!=distance.end();++i)
 	{
 		printf("%d ",*i );
 	}
+*/
+	printf("%d\n",(distance[f]==INF?-1:distance[f]) );
 
     fclose(stdin);
     fclose(stdout);
