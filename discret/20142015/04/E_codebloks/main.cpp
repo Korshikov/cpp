@@ -25,12 +25,12 @@ int main()
     scanf("%d %d %d",&n,&m,&s);
     std::vector<edge> edges(m);
     s--;
-    
+
     for(std::vector<edge>::iterator i=edges.begin();i != edges.end();++i)
     {
         scanf("%d %d %lld",&(*i).from,&(*i).to,&(*i).weight);
         (*i).from--;
-        (*i).to--;        
+        (*i).to--;
     }
 
     vector<long long> distance(n,INF);
@@ -47,17 +47,17 @@ int main()
     		{
     			distance[(*i).to] = std::max(distance[(*i).from] + (*i).weight, -INF);
     		}
-    		if(distance[(*i).from == -INF])
+    		if(distance[(*i).from] == -INF)
     		{
     			distance[(*i).to] = -INF;
     		}
     	}
     }
-   
+
     std::vector<long long> oldDistance(n);
     std::copy(distance.begin(),distance.end(),oldDistance.begin());
 
-	
+
     for (int i = 0; i < n; ++i)
     {
     	for (std::vector<edge>::iterator i = edges.begin(); i != edges.end(); ++i)
@@ -82,7 +82,7 @@ int main()
 		{
 			printf("*\n");
 		}
-		else 
+		else
 		if((*i!=*t)||(*i == -INF))
 		{
 			printf("-\n");
