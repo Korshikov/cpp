@@ -80,4 +80,6 @@ int main()
 
 
     std::printf("%.20f\n", ans);
+	return 0;
+
 }
