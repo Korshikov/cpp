@@ -1,0 +1,27 @@
+4 6 20
+3 1
+2 1
+4 2
+4 1
+2 3
+3 4
+ask 4 3
+ask 3 1
+cut 3 2
+ask 2 3
+ask 1 2
+ask 1 4
+ask 2 1
+ask 2 4
+ask 1 2
+cut 4 3
+cut 4 1
+ask 3 1
+ask 3 2
+cut 3 1
+ask 4 4
+cut 2 1
+ask 2 3
+cut 4 2
+ask 2 1
+ask 2 2
