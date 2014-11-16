@@ -28,12 +28,19 @@ void dfs(int v)
 
 int main()
 {
-    freopen("connect.in","r",stdin);
-    freopen("connect.out","w+",stdout);
+    freopen("tree.in","r",stdin);
+    freopen("tree.out","w+",stdout);
 
     topsort.clear();
     scanf("%d %d",&n,&m);
     color.assign(n,0);
+    if(m!=n-1)
+    {
+        printf("NO\n");
+        fclose(stdin);
+        fclose(stdout);
+        exit(0);
+    }
     for(int i=0;i<n;i++)
     {
         graph.push_back(vector<int>());

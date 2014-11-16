@@ -1,19 +1,20 @@
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
+#include <set>
+#include <algorithm>
 
 using namespace std;
 
 int n,m,time=0;
-vector<vector<int> > graph;
+set<int> graph[200000];
 vector<char> color;
-//vector<int> parent;
 vector<int> topsort;
 
 void dfs(int v)
 {
     color[v]= 1;
-    for(vector<int>::iterator i=graph[v].begin();i!=graph[v].end();++i)
+    for(set<int>::iterator i=graph[v].begin();i!=graph[v].end();++i)
     {
         switch(color[*i])
         {
@@ -28,40 +29,50 @@ void dfs(int v)
 
 int main()
 {
-    freopen("connect.in","r",stdin);
-    freopen("connect.out","w+",stdout);
+    freopen("unitopsort.in","r",stdin);
+    freopen("unitopsort.out","w+",stdout);
 
     topsort.clear();
     scanf("%d %d",&n,&m);
     color.assign(n,0);
-    for(int i=0;i<n;i++)
-    {
-        graph.push_back(vector<int>());
-    }
 
     int bufer1,bufer2;
 
     for(int i=0;i<m;++i)
     {
         scanf("%d %d",&bufer1,&bufer2);
-        graph[bufer1-1].push_back(bufer2-1);
-        graph[bufer2-1].push_back(bufer1-1);
+        graph[bufer1-1].insert(bufer2-1);
     }
-
-    dfs(0);
 
     for(int i=0;i<n;++i)
     {
         if(color[i]==0)
         {
-            printf("NO\n");
-            fclose(stdin);
-            fclose(stdout);
-            exit(0);
+            dfs(i);
         }
     }
 
+    for(vector<int>::reverse_iterator i=topsort.rbegin();(i+1)!=topsort.rend();++i)
+    {
+        if(graph[*i].find(*(i+1))==graph[*i].end())
+        {
+            printf("NO\n");
+            fclose(stdin);
+            fclose(stdout);
+
+            return 0;
+        }
+
+    }
+
     printf("YES\n");
+    for(vector<int>::reverse_iterator i=topsort.rbegin();(i)!=topsort.rend();++i)
+    {
+        printf("%d ", *i+1);
+
+    }
+
+
     fclose(stdin);
     fclose(stdout);
 
